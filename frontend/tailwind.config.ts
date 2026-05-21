@@ -50,9 +50,6 @@ export default {
         center: true,
         padding: "1rem",
       },
-      fontFamily: {
-        sans: ["var(--font-vazir)", ...fontFamily.sans],
-      },
     },
   },
   plugins: [

@@ -18,8 +18,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>{children}</body>
+    <html lang="en" className={`${inter.className} min-h-screen`}>
+      <body>
+        <div>header</div>
+        <div className="container xl:max-w-screen-xl"> {children}</div>
+      </body>
     </html>
   );
 }

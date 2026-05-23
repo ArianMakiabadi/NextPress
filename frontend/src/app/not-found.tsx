@@ -3,29 +3,23 @@ import Button from "@/ui/Button";
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-4">
-      <div className="text-center max-w-md w-full flex flex-col items-center gap-y-6 bg-secondary-0 p-10 rounded-xl shadow-sm">
+    <main className="min-h-screen bg-secondary-50 text-secondary-900 flex items-center justify-center px-4">
+      <div className="p-10 bg-secondary-0 rounded-2xl shadow-sm border border-secondary-100 text-center max-w-md w-full flex flex-col items-center gap-y-6">
         {/* 404 */}
-        <span className="text-8xl font-extrabold tracking-tight text-primary-900">
-          404
-        </span>
+        <span className="text-8xl font-extrabold text-primary-900">404</span>
 
         {/* Title */}
-        <h1 className="text-2xl font-semibold text-secondary-900">
-          Page Not Found
-        </h1>
+        <h1 className="text-2xl font-semibold">Page Not Found</h1>
 
         {/* Description */}
-        <p className="text-secondary-500 text-sm leading-relaxed">
+        <p className="text-secondary-500 text-sm">
           The page you are looking for does not exist or has been moved.
         </p>
 
-        {/* CTA */}
-        <Link href="/">
-          <Button variant="primary" className="px-8">
-            Go Home
-          </Button>
-        </Link>
+        {/* CTA — matches homepage pattern: Link inside Button */}
+        <Button>
+          <Link href="/">Go Home</Link>
+        </Button>
       </div>
     </main>
   );

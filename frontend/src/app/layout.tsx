@@ -9,7 +9,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NextPress",
+  title: {
+    template: "%s | NextPress",
+    default: "NextPress",
+  },
   description: "A platform where you can create and share your blogs!",
 };
 

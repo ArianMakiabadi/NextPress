@@ -12,12 +12,10 @@ type Category = {
 };
 
 async function CategoryList() {
-  const res = await fetch("http://localhost:5001/api/category/list");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/category/list`);
   const {
     data: { categories },
   } = await res.json();
-
-  console.log(categories);
 
   return (
     <ul className="space-y-2 p-2">

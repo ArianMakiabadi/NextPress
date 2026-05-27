@@ -1,5 +1,10 @@
 import Button from "@/ui/Button";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Home | NextPress",
+};
 
 export default function Home() {
   return (

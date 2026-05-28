@@ -1,23 +1,17 @@
-import { Post } from "../../types/post";
+import { Suspense } from "react";
+import PostsList from "./_components/PostsList";
+import Spinner from "@/ui/Spinner";
 
-type PostsResponse = {
-  data: {
-    posts: Post[];
-  };
-};
-
-async function Page() {
-  await new Promise<void>((res) => setTimeout(() => res(), 3000));
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/post/list`);
-  const {
-    data: { posts },
-  }: PostsResponse = await res.json();
-  console.log(posts);
+function Page() {
   return (
     <div>
-      {posts.map((post) => {
-        return <div>{post.title}</div>;
-      })}
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+        aperiam!
+      </p>
+      <Suspense fallback={<Spinner />}>
+        <PostsList />
+      </Suspense>
     </div>
   );
 }

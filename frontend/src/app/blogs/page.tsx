@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import PostsList from "./_components/PostsList";
+import BlogsList from "./_components/BlogsList";
 import Spinner from "@/ui/Spinner";
 
 function Page() {
@@ -10,7 +10,7 @@ function Page() {
         aperiam!
       </p>
       <Suspense fallback={<Spinner />}>
-        <PostsList />
+        <BlogsList />
       </Suspense>
     </div>
   );

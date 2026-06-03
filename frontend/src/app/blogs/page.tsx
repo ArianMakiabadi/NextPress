@@ -5,7 +5,7 @@ import Spinner from "@/ui/Spinner";
 function Page() {
   return (
     <div>
-      <p>
+      <p className="mb-6 text-sm leading-6 text-secondary-500">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
         aperiam!
       </p>

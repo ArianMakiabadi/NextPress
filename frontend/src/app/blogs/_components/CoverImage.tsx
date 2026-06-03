@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function CoverImage({ coverImageUrl, title, slug }: Post) {
   return (
-    <div className="relative aspect-[16/9] overflow-hidden mb-4">
+    <div className="relative aspect-[16/9] overflow-hidden">
       <Link href={`/blogs/${slug}`}>
         <Image
           fill

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import CategoryList from "./_components/CategoryList";
 
 export const metadata: Metadata = {
   title: "Blogs",
@@ -14,7 +15,7 @@ function Layout({
       <h1 className="text-lg font-bold mb-12 ">List of the blogs</h1>
       <div className="grid grid-cols-12 gap-8">
         <div className="col-span-12 lg:col-span-4 xl:col-span-3 text-secondary-500 space-y-4 bg-violet-200">
-          list of categories
+          <CategoryList />
         </div>
         <div className="col-span-12 lg:col-span-8 xl:col-span-9 bg-orange-200">
           {children}

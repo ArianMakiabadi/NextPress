@@ -2,12 +2,8 @@ import { Post } from "@/types/post";
 import CoverImage from "./CoverImage";
 import Link from "next/link";
 import Author from "./Author";
-import {
-  IoArrowForward,
-  IoChatbubbleOutline,
-  IoHeartOutline,
-  IoTimeOutline,
-} from "react-icons/io5";
+import { IoArrowForward, IoTimeOutline } from "react-icons/io5";
+import PostEngagement from "./PostEngagement";
 
 type PostsResponse = {
   data: {
@@ -65,17 +61,10 @@ async function BlogsList() {
 
               <div className="mt-auto flex items-center justify-between gap-3 border-t border-secondary-100 pt-4">
                 <Author {...post.author} />
-
-                <div className="flex items-center gap-3 text-xs text-secondary-500">
-                  <span className="inline-flex items-center gap-1">
-                    <IoChatbubbleOutline className="h-4 w-4" />
-                    {post.commentsCount}
-                  </span>
-                  <span className="inline-flex items-center gap-1">
-                    <IoHeartOutline className="h-4 w-4" />
-                    {post.likesCount}
-                  </span>
-                </div>
+                <PostEngagement
+                  likesCount={post.likesCount}
+                  commentsCount={post.commentsCount}
+                />
               </div>
 
               <Link
